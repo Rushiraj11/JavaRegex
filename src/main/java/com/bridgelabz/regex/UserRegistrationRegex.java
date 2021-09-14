@@ -6,6 +6,7 @@ public class UserRegistrationRegex {
         firstNameName();
         lastName();
         emailId();
+        mobileNum();
     }
         public static void firstNameName(){
             String Firstnameinput = "Rushiraj";
@@ -42,6 +43,17 @@ public class UserRegistrationRegex {
                 System.out.println("Invalid");
             }
 
+    }
+    public static void mobileNum() {
+        String input = "91 8456889746";
+        String regex = "^[0-9]{2}\\s[0-9]{10}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+        if (matcher.matches()) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("Invalid");
+        }
     }
 }
 
