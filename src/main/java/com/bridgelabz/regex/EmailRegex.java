@@ -4,8 +4,8 @@ import java.util.regex.Pattern;
 public class EmailRegex {
     public static void main(String[] args) {
 
-        String input = "abc@bridgelabz";
-        String regex = "^[a-c]+@[bridgelabz]{10}$";
+        String input = "abc@bridgelabz.co";
+        String regex = "^[a-c]+@[bridgelabz]{10}+.[co]{2}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches()) {
