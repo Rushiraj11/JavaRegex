@@ -57,8 +57,8 @@ public class UserRegistrationRegex {
         }
     }
     public static void password() {
-        String input = "aTpklkpo";
-        String regex = "^(?=.*[A-Z]){1}(?=.*[a-z]).{8,}$";
+        String input = "aTpklk9o";
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
         if (matcher.matches()) {
